@@ -31,3 +31,38 @@
 ## Hai quasi finito
 
 1. Premere il tasto RESET fisico sulla board e scollegarla dal Mac
+
+---
+
+
+
+# Versione alternativa con FZEasyMarauderFlash di SkeletonMan03
+
+## Scaricare FZEasyMarauderFlash
+
+1. Andare su https://github.com/SkeletonMan03/FZEasyMarauderFlash e scaricare lo zip cliccando sul pulsante verde in alto a destra `Code` e cliccare sulla voce `Download ZIP`
+2. Estrarre lo zip
+
+## Preparare la Dev Board e il Flipper Zero
+
+1. Spegnere il Flipper Zero (pulsante centrale > Settings > Power > Power off > freccia destra)
+2. Inserire la Dev Board nel Flipper Zero (attenzione ad inserire bene i pin negli alloggiamenti)
+3. Accendere il Flipper Zero
+4. Preparare il cavo di connessione USB-C già attaccato al Mac ma NON ancora alla Dev Board
+
+## Eseguire FZEasyMarauderFlash
+
+1. Aprire il  terminale del Mac (Terminale.app) cercandolo tra le applicazioni o digitando `terminale` su Spotlight
+2. Posizionarsi sulla cartella estratta (es. se la cartella è stata scaricata ed estratta su Downloads, digitare 
+`cd /Users/il_vostro_nome_utente/Downloads/FZEasyMarauderFlash-main`
+3. Digitare il comando `sudo pip3 install -r requirements.tx`, inserire la password del Mac se richiesta e lasciare che il terminale esegua
+4. Una volta terminato, prepararsi a collegare il cavo USB-C con la Dev Board:
+    - Tenere premuto il tasto `BOOT` sulla Dev Board
+    - Con il tasto `BOOT` premuto, inserire il cavo USB-C nella Dev Board
+    - Sempre con il tasto `BOOT` premuto, premere per 5 secondi il tasto `RESET` e rilasciarlo
+    - Rilasciare il tasto `BOOT`
+5. Da terminale, digitare il comando `sudo python3 EasyInstall.py` e inserire la password del Mac se richiesta
+6. Nel caso non ci sia già Python3 installato e venga richiesto (è possibile verificarlo digitando nel terminale il comando `python3 --version`), procedere come segue:
+    - Installare Homebrew (il gestore di pacchetti mancanti per macOS) digitando sempre a terminale il comando `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+    - Installare Python digitando `sudo brew install python3` e inserire la password del Mac se richiesta
+
